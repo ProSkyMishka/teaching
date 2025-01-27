@@ -55,6 +55,7 @@ MyVaporApp/
 │       ├── Models/
 │       ├── Config/
 │       ├── routes.swift
+│       ├── entrypoint.swift
 │       └── configure.swift
 │-- Public/
 │-- Resources/
