@@ -1,0 +1,91 @@
+body {
+    color: aliceblue;
+    background: url(src/space.png);
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h2 {
+    font-size: 3vh;
+}
+
+nav a {
+    font-size: 1.5vh;
+    padding: 15px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: bisque;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 10vw;
+}
+
+.card {
+    width: 17vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1vh;
+    background: rgba(69, 68, 68, 0.5);
+    border-radius: 15px;
+    padding-bottom: 2vh;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card figure {
+    height: min(17vw, 22vh);
+    width: 17vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+figure img {
+    width: min(15vw, 22vh);
+    max-height: 22vh;
+}
+
+.card button {
+    background: none;
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.card button:hover {
+    color: bisque;
+}
+
+.card h2 {
+    font-size: min(2vw, 5vh);
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 34vw;
+    }
+
+    .card h2 {
+        font-size: 4vw;
+    }
+}

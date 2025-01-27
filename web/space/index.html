@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Space Travel</h2>
+        <nav>
+            <a>more</a>
+            <a>planets</a>
+            <a>sun</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <script>
+            planets = [
+                "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"
+            ]
+            planets.forEach(planet => {
+                document.write(`
+                <div class="card">
+                    <figure>
+                        <img src="src/${planet}.png" alt="${planet}">
+                    </figure>
+                    <h2>${planet}</h2>
+                    <button onclick="window.location.href='${planet.toLowerCase()}.html'">&#9660;</button>
+                </div>
+                `)
+            });
+        </script>
+    </div>
+</body>
+</html>
