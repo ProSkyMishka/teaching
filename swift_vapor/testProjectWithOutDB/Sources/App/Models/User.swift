@@ -2,35 +2,28 @@
 //  File.swift
 //  
 //
+//  Created by Михаил Прозорский on 29.01.2025.
+//
+
+//
+//  File.swift
+//
+//
 //  Created by Михаил Прозорский on 27.01.2025.
 //
 
-import Fluent
 import struct Foundation.UUID
 import Vapor
 
-final class User: Model, Sendable, Content {
-    static let schema = "users"
-    
-    @ID(key: .id)
-    var id: UUID?
-
-    @Field(key: "username")
+final class User: Sendable, Content {
+    var id: Int
     var username: String
-    @Field(key: "email")
     var email: String
-    @Field(key: "password")
     var password: String
-    @Field(key: "secretResponse")
     var secretResponse: String
-    @Field(key: "token")
     var token: String
-    
-    
 
-    init() { }
-
-    init(id: UUID? = nil, name: String, email: String, password: String, response: String, token: String) {
+    init(id: Int, name: String, email: String, password: String, response: String, token: String) {
         self.id = id
         self.username = name
         self.email = email
